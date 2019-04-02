@@ -69,72 +69,7 @@ To test for the existence of a latent construct from responses to the five major
 
 $$Pr(Y_{ij} \ge k|\alpha_{i},\beta{i},\theta_{j})= \frac{exp(\alpha_{i}\theta_{j} - \beta_{ik})} {1 + exp(\alpha_{i}\theta_{j} - \beta_{ik})}$$
 
-where alpha is the discrimination parameter for a particular item. Beta represents the cut point k between each response. Theta is the latent trait for a particular person j. Graded response models calculate the probability of observing outcome k or ones greater. 
-	In nominal response models, the same logic is extended to non-ordered categorical items. Nominal models also allow each item to vary in difficulty and parameter. The model, proposed by Bock (1972), is helpful because it allows the prediction of each particular response. The following equation illustrates the probability of an individual person j selecting a particular category k for each item i. 
-
-$$Pr(Y_{ij}= k | \alpha_{i},\beta_{i},\theta) = \frac{exp(\alpha_{ik}\theta_{j}+\beta_{ik})} {\sum_{h=1}^{K} exp(\alpha_{ih}\theta_{j}+\beta_{ih})}$$
-
-#####Model Results and Interpretation:
-
-For the item response models, I drop the respondents that did not answer the questions in Table 1. After fitting both a graded response model and a nominal response model, I find that there is evidence for the existence of a meaningful latent trait for three questions. The three questions are: (1) How important is it for parents to vaccinate their children? (2) Do certain vaccines cause autism in children? (3) Do you think vaccines are more dangerous than the disease they are designed to prevent? The graded response model yields a non-zero discrimination parameter that is statistically significant for the three questions. The nominal response model reports statistically significant differences between responses that are skeptical and not skeptical of vaccines. For example, there is a statistically significant difference between the responses that vaccination is “Extremely Important” and “Not Very Important.” The results are included in Table 1 of the appendix. 
-
-Beyond the models’ results, Jackman (2008) recommends discussing reliability and validity. Regarding reliability, the models report measures of uncertainty that are below conventional measures. I argue that the models measured “what they are supposed to be measuring.” Especially in the ordered, graded response model, the distinction between high and lower ordered responses captures a skepticism of vaccination. The importance of vaccination and perception of links with autism are both loaded questions that capture the attitudes of individuals towards vaccination. Therefore, I am not worried about multidimensionality. To test the unidimensionality assumption, I used factor analysis and found that, once accounting for the latent attitude, the questions yield one factor.
-
-                     [Insert Figure 1 & 2 here]                       
-
-Figures 1 and 2 are characteristic curves that show the role of theta in the probability of observing particular responses. Theta is the latent construct or attitude measure. For vaccine importance, Figure 1 shows that as theta increases the probability of responding “Extremely Important” decreases. When the “Extremely Important” line intersects with the red line, that value of theta yields a higher probability of responding “Very Important.” As theta increases respondents will be more likely to respond, “Somewhat Important.” Finally, a value of theta that continues to increase yields higher probability of responding “Not at all important.”
-
-The role of theta is professing itself more in Figure 2. Here, respondents are asked whether certain vaccines cause autism. As theta increases the probability of responding “No” decreases. As theta increases, we encounter less certain respondents that were “Unsure” if vaccines cause autism. When the green line intersects with the blue line, for values of theta greater than 2, respondents are more likely to respond “Yes.” 
-
-Taken together, the figures illustrate that the models are measuring what is intended for them to measure. As theta increases, the more likely the respondents hold anti-vaccination attitudes. In the following section, I predict responses to each of the two questions. After looking at predictions of raw responses, I predict theta. 
-   
-                     
-####Multinomial Logit: 
-
-In this section I discuss the results of models that directly predict responses. As opposed to looking at the theta parameter of the anti-vaccination attitude, I test how the covariates do in predicting raw responses. I use both individual and state level covariates in these models. After discussing the multinomial model presented, I discuss covariates in both models, and explain the results. I show that looking at the latent constructs is necessary because the covariates do not do well at predicting responses. 
-
-To test individual level variables, I fit a multinomial logit model to predict individual responses. The multinomial model is clustered by state. The model tests both the importance of vaccinations and vaccinations and autism responses as the dependent variables. In this model, I incorporate state level variables. I use a multinomial model instead of an ordered logit. Ordered logit models do not allow clustering by state. 
-
-	
-#####Independent Variables:
-
-I argue that states that facilitate frequent interaction between citizens and doctors should have less skepticism towards vaccination. If citizens get their information from doctors, they should be more likely to have less professed anti-vaccination concerns. In order to capture the conditions that facilitate frequent interaction between individuals and doctors, I include several state-level variables. State level data is taken from the Kaiser Family Foundation dataset on health care. State level variables are from 2014, a year before the survey was conducted. The first state-level variable is percent of adults that have not seen a doctor in the past twelve months. The second variable is a measure of the percent of uninsured individuals by state. 
-
-I also use individual level data that was collected during the survey. I use an ideology variable to test competing hypotheses about anti-vaccination sentiments. The ideology variable is an ordered variable that ranges from very conservative to very liberal. Baum (2011) argues that anti-vaccination opinions are shaped by ideology. Although Baum was looking at H1N1 vaccines, there is still reason to believe that the logic applies to the claims made in this article. 
- 
-
-#####Controls:
-
-At the individual level, I control for seven variables. I control for religiosity to account for variation explained by religious belief. States allow exemptions from vaccination for religious reasons. Therefore, religious concerns are expected to influence attitudes towards vaccinations. The religiosity variable is measured by church attendance.  I include age to account for a generational differences between respondents. The variable is ordinal and is broken into ten year intervals. I include education to account for variation in knowledge that results from differences in formal education. The variable is ordinal and measures whether respondents completed high school, some college, college, or post graduate degrees. There is reason to believe that differences in income may allow more access to reliable information or alternate information. Income is measured as monthly household income. I include a dichotomous variable that indicates for whether the respondent was a parent. I include gender and race to account for demographic and other distinctions between respondents. A respondent is a male if the gender variable equals 1.  Race is measured as a dichotomous variable and equals 1 when the respondent is white. 
-
-At the state level I include a control that accounts for the percent of children that are uninsured. The control is necessary to separate the state policy implications. Children are insured under federal mandates. If they are not separate from the percent uninsured variable it would be will be misleading. I include an interaction between percent health insurance coverage and individual ideology. I include this variable because I use a multilevel modelling in Table 3. Therefore, it is included in both models so they are consistent. 
- 
-
-                     [Insert Table 2 here]
-
-#####Results:
-
-The results are presented in Table 2. The omitted response is the baseline category for each model. Model 1 uses the question about the importance of vaccinations as the dependent variable. Model 2 uses perception of links to autism as the dependent variable. Based on the results, there is no evidence for any of the variables having a consistent effect on vaccine skepticism.  Consistency would require that variables predict a higher likelihood of finding vaccines not important and expressing worry about links to autism. In both models, particular variables may predict a response but not a consistent attitude. The results illustrate the limits of looking at direct responses and not using item response models. 
-
-
-                     [Insert Table 3 here]
-
-####Item Response Models:
-
-More meaningful results are observed using item response models.  In the previous model, I predicted responses to each question. Here, I will predict the value of theta, conditional on the covariates. I use a mixed linear model and group respondents according to states. The dependent variable is the predicted value of theta for each respondent. I find no statistically significant relationship between the percent of individuals that have seen doctors and anti-vaccination attitudes. I find, all else equal, that higher values of theta are associated with individuals from states with higher uninsured populations. Therefore, the results only confirm my second hypothesis. 
-
-There seems to be a link between state health care policy and anti-vaccination attitudes. I predicted that the link operates through interaction with doctors. However, the variable that measures interaction with doctors is not statistically significant. Given the controls that are included at the individual-level the results still suggest that there is more evidence for the knowledge deficit theory than ideology. The results also indicate that, all else equal, more educated respondents have lower skepticism towards vaccination. Also, white respondents are more likely to have higher skepticism.  Men are less likely to have skepticism towards vaccination. However, these results are not theorized in this article.    
- 
-
-####Conclusion: 
-
-Although anti-vaccination sentiments receive coverage in the news, social scientist have not studied them extensively. The medical community agrees that there is no evidence that links childhood vaccination regimens to autism. However, politicians and interest groups act based on misconception. In this article, I show that anti-vaccinations sentiments are more prevalent in states where individuals have less interaction with medical professionals. 
-
-I argue against claims that attribute anti-vaccination sentiments to ideology. Beyond the fact that politicians on both sides of the ideological spectrum have raised these concerns, I show that there is no evidence of effects of ideology in the 2015 survey. I argue in favor of the knowledge deficit hypothesis. My findings expand on work that finds that more reliable sources of information lead to less skepticism towards vaccination.
-
-Future research should begin by gathering more data on anti-vaccination sentiments. With individual-level data on interaction with doctors, I could have more evidence to test the link between health policy and anti-vaccination attitudes.  Also, the effects of measles and mumps outbreaks on public opinion is not clear. With more data across different points in time, scholars may be able to identify the effects outbreaks as information shocks. 
- 
-
+where alpha is the discrimination parameter for a particular item. Beta represents the cut point k between each response. Theta is the latent tr
 ******
 
 ####Tables and Figures
@@ -189,7 +124,6 @@ Warshaw, C. 2018. “Latent Constructs in Public Opinion” in The Oxford Handbo
 
 ####Appendix
 
-![Nominal IRT](appendTABLE1.png)
 
 
 
