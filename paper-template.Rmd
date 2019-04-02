@@ -6,7 +6,7 @@ output:
     fig_caption: true
     latex_engine: pdflatex
     template: svm-latex-ms2.tex
-title: "Information, Ideology, and Anti-Vaccination Attitudes" 
+title: "Draft: Information, Ideology, and Anti-Vaccination Attitudes" 
 thanks: "The paper's revision history and the materials needed to reproduce its analyses can be found [on Github here](https://github.com/aq92/7450paper.git). Corresponding author: [ahmad-qbazard@uiowa.edu](mailto:ahmad-qabazard@uiowa.edu). Current version: `r format(Sys.time(), '%B %d, %Y')`."
 author:
 - name: Ahmad S. Qabazard
@@ -191,15 +191,11 @@ Warshaw, C. 2018. “Latent Constructs in Public Opinion” in The Oxford Handbo
 
 ![Nominal IRT](appendTABLE1.png)
 
+
+
 ## Citations
 
 #Zotero 
 
 @mulligan2011
 
-
-
-## Other Common Things
-
-> This will create a block quote, if you want one.
-Dropping a footnote is easy.^[See? Not hard at all.]
