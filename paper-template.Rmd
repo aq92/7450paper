@@ -74,13 +74,10 @@ where alpha is the discrimination parameter for a particular item. Beta represen
 
 ####Tables and Figures
 
-![Descriptive](Table1.png)
 
-![Item Charateristic Curve p918](Figure1.png)
-![Item Charateristic Curve p918](Figure2.png)
 
-![Multinomial Logit](qabazard-state-table3.png)
-![Multinomial Logit](qabazard-state-table4.png)
+
+
 
 ******
 
